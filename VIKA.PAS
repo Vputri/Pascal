@@ -1,0 +1,341 @@
+program	tugas;
+uses crt;
+label menu1,menu2,menu4,menu5,menu3,menu6;
+var
+	i:byte;
+	PKT,Code,Cod,mem,Kode,wisata,Pilih,lagi,Jawab:String;
+	menu,jp:integer;
+	TOTAL,TOTAL1,discont,diskon,kem,ua,harga:real;
+
+begin
+textbackground(1);
+textcolor(15);
+clrscr;
+gotoxy(35,9);writeln('S');
+delay(400);
+gotoxy(35,9);writeln('SE');
+delay(400);
+gotoxy(35,9);writeln('SEL');
+delay(400);
+gotoxy(35,9);writeln('SELA');
+delay(400);
+gotoxy(35,9);writeln('SELAM');
+delay(400);
+gotoxy(35,9);writeln('SELAMA');
+delay(400);
+gotoxy(35,9);writeln('SELAMAT');
+delay(400);
+gotoxy(35,9);writeln('SELAMAT ');
+delay(400);
+gotoxy(35,9);writeln('SELAMAT D');
+delay(400);
+gotoxy(35,9);writeln('SELAMAT DA');
+delay(400);
+gotoxy(35,9);writeln('SELAMAT DAT');
+delay(400);
+gotoxy(35,9);writeln('SELAMAT DATA');
+delay(400);
+gotoxy(35,9);writeln('SELAMAT DATAN');
+delay(400);
+gotoxy(35,9);writeln('SELAMAT DATANG');
+delay(400);
+gotoxy(41,11);writeln('D');
+delay(400);
+gotoxy(41,11);writeln('DI');
+delay(400);
+gotoxy(30,13);writeln('W');
+delay(400);
+gotoxy(30,13);writeln('WA');
+delay(400);
+gotoxy(30,13);writeln('WAH');
+delay(400);
+gotoxy(30,13);writeln('WAHA');
+delay(400);
+gotoxy(30,13);writeln('WAHAN');
+delay(400);
+gotoxy(30,13);writeln('WAHANA ');
+delay(400);
+gotoxy(30,13);writeln('WAHANA W');
+delay(400);
+gotoxy(30,13);writeln('WAHANA WI');
+delay(400);
+gotoxy(30,13);writeln('WAHANA WIS');
+delay(400);
+gotoxy(30,13);writeln('WAHANA WISA');
+delay(400);
+gotoxy(30,13);writeln('WAHANA WISAT');
+delay(400);
+gotoxy(30,13);writeln('WAHANA WISATA ');
+delay(400);
+gotoxy(30,13);writeln('WAHANA WISATA A');
+delay(400);
+gotoxy(30,13);writeln('WAHANA WISATA AL');
+delay(400);
+gotoxy(30,13);writeln('WAHANA WISATA ALA');
+delay(400);
+gotoxy(30,13);writeln('WAHANA WISATA ALAM ');
+delay(400);
+gotoxy(30,13);writeln('WAHANA WISATA ALAM L');
+delay(400);
+gotoxy(30,13);writeln('WAHANA WISATA ALAM LO');
+delay(400);
+gotoxy(30,13);writeln('WAHANA WISATA ALAM LOL');
+delay(400);
+gotoxy(30,13);writeln('WAHANA WISATA ALAM LOLO');
+delay(400);
+gotoxy(30,13);writeln('WAHANA WISATA ALAM LOLON');
+delay(400);
+gotoxy(30,13);writeln('WAHANA WISATA ALAM LOLONG');
+delay(400);
+
+gotoxy(3,22);WRITE('LOADING : ');
+delay(400);
+
+for i:=15 to 78 do
+begin
+gotoxy(i,22);write(chr(177));
+delay(200);
+end;
+textcolor(15);
+
+begin
+menu1:
+clrscr;
+writeln;
+writeln('             WAHANA WISATA ALAM LOLONG      ');
+writeln;
+writeln('    |----|-------------------------------|');
+writeln('    | NO.|            Pilihan            |');
+writeln('    |----|-------------------------------|');
+writeln('    | 1. | Rafting(Arum Jeram)           |');
+writeln('    | 2. | Tubing                        |');
+writeln('    | 3. | Jungkle Trekking (Curug Lowo) |');
+writeln('    | 4. | Camping                       |');
+writeln('    |----|-------------------------------|');
+writeln;
+writeln('               Promo Untuk Member');
+writeln('    |-----------------------------------|');
+writeln('    |       Diskon Untuk Member 10%     |');
+writeln('    |-----------------------------------|');
+writeln('');
+writeln('          Promo Khusus Bulan Agustus!');
+writeln('    |-----------------------------------|');
+writeln('    |        SETIAP PEMBELIAN 20        |');
+writeln('    |         ATAU KELIPATANNYA         |');
+writeln('    |            Diskon 20%             |');
+writeln('    |-----------------------------------|');
+writeln('');
+write  ('    Masukkan Pilihan anda    : ');readln(menu);
+
+clrscr;
+case menu of
+	1: begin
+	menu2:
+	    wisata:='Rafting(Arum Jeram)';
+		writeln;
+		writeln('                 Ratfing (Arum Jeram)');
+		writeln('');
+		writeln('    |----|-------|---------|--------------|----------------|');
+		writeln('    | NO | Kode  |  Paket  | Jarak Tempuh |      Harga     |');
+		writeln('    |----|-------|---------|--------------|----------------|');
+		writeln('    | 1. | RAJ1  | Paket 1 |     12 Km    | 185.000/orang  |');
+		writeln('    | 2. | RAJ2  | Paket 2 |      9 Km    | 150.000/orang  |');
+		writeln('    | 3. | RAJ3  | Paket 3 |      7 Km    | 140.000/orang  |');
+		writeln('    |----|-------|---------|--------------|----------------|');
+		writeln('');
+		write  ('    Masukkan kode paket pilihan    : '); readln (PKT);
+		if (PKT='RAJ1') or (PKT='raj1') then
+		Begin
+		Pilih:='Paket 1';
+		harga:=185000;
+		write  ('    Apakah Anda Punya Member [Y/T] : ');readln (mem);
+		write  ('    Jumlah Tiket Yang anda Pesan   : ');readln (jp);
+		goto menu6;
+		end;
+		if (PKT='RAJ2') or(PKT='raj2') then
+		begin
+		Pilih:='Paket 2';
+		harga:=150000;
+		write  ('    Apakah Anda Punya Member [Y/T] : ');readln (mem);
+		write  ('    Jumlah Tiket Yang anda Pesan   : ');readln (jp);
+		goto menu6;
+		end;
+        if (PKT='RAJ3') or (PKT='raj3') then
+		begin
+		Pilih:='Paket 3';
+		harga:=140000;
+		write  ('    Apakah Anda Punya Member [Y/T] : ');readln (mem);
+		write  ('    Jumlah Tiket Yang anda Pesan   : ');readln (jp);
+		goto menu6;
+		end
+		else
+		write  ('    Masukkan Anda Salah');
+		writeln;
+		write  ('    Silahkan Masukkan Kode Lagi');
+		GoTo menu2;
+       end;
+
+     2:begin
+	 menu3:
+		wisata:='Tubing';
+		writeln('                                    Tubing');
+		writeln('');
+		writeln('    |----|-------|---------|--------------|---------------|----------------|');
+		writeln('    | NO | Kode  |  Paket  | Jarak Tempuh | Waktu Tempuh  |      Harga     |');
+		writeln('    |----|-------|---------|--------------|---------------|----------------|');
+		writeln('    | 1. | TUB1  | Paket 1 |     4 Km     |    1,5 Jam    | 100.000/orang  |');
+		writeln('    | 2. | TUB2  | Paket 2 |     3 Km     |      1 Jam    |  60.000/orang  |');
+		writeln('    | 3. | TUB3  | Paket 3 |     2 Km     |    45 Menit   |  40.000/orang  |');
+		writeln('    |----|-------|---------|--------------|---------------|----------------|');
+		writeln('');
+		write  ('    Masukkan kode paket pilihan    : '); readln (Code);
+		if (Code='TUB1') or (Code='tub1') then
+		begin
+		Pilih:='Paket 1';
+		harga:=100000;
+		write  ('    Apakah Anda Punya Member [Y/T] : ');readln (mem);
+		write  ('    Jumlah Tiket Yang anda Pesan   : ');readln (jp);
+		goto menu6;
+		end;
+		if (Code='TUB2') or (Code='tub2') then
+		begin
+		Pilih:='Paket 2';
+		harga:=600000;
+		write  ('    Apakah Anda Punya Member [Y/T] : ');readln (mem);
+		write  ('    Jumlah Tiket Yang anda Pesan   : ');readln (jp);
+		goto menu6;
+		end;
+        if (Code='TUB3') or (Code='tub3') then
+		begin
+	    Pilih:='Paket 3';
+		harga:=40000;
+		writeln ;
+		write  ('    Apakah Anda Punya Member [Y/T] : ');readln (mem);
+		write  ('    Jumlah Tiket Yang anda Pesan   : ');readln (jp);
+		goto menu6;
+		end
+		else
+		write  ('    Masukkan Anda Salah');
+		goto menu3;
+       end;
+
+     3:begin
+	 menu4:
+		wisata:='Jungkle Trekking (Curug Lowo)';
+       	writeln('                       Jungkle Trekking (Curug Lowo)');
+		writeln('');
+		writeln('    |----|-------|---------|----------------|----------------|');
+		writeln('    | NO | Kode  |  Paket  |  Waktu Tempuh  |      Harga     |');
+		writeln('    |----|-------|---------|----------------|----------------|');
+		writeln('    | 1. | JKCL1 | Paket 1 |     2 Jam      |  50.000/orang  |');
+		writeln('    | 2. | JKCL2 | Paket 2 |     1 Jam      |  30.000/orang  |');
+		writeln('    |----|-------|---------|----------------|----------------|');
+		writeln('');
+		write  ('    Masukkan kode paket pilihan     : '); readln (Kode);
+		if (Kode='JKCL1') or (Kode='jkcl1') then
+		begin
+		Pilih:='Paket 1';
+		harga:=50000;
+		write  ('    Apakah Anda Punya Member [Y/T] : ');readln (mem);
+		write  ('    Jumlah Tiket Yang anda Pesan   : ');readln (jp);
+		goto menu6;
+		end;
+		if (Kode='JKCL2') or (Kode='jkcl2') then
+		begin
+		Pilih:='Paket 2';
+		harga:=300000;
+		write  ('     Apakah Anda Punya Member [Y/T] : ');readln (mem);
+		write  ('     Jumlah Tiket Yang anda Pesan   : ');readln (jp);
+		goto menu6;
+		end
+		else
+		write  ('    Masukkan Anda Salah');
+		goto menu4;
+       end;
+
+     4:begin
+	 menu5:
+		wisata:='Camping';
+	    writeln;
+       	writeln('                       Camping');
+		writeln('');
+		writeln('    |----|--------|---------|----------------|----------------|');
+		writeln('    | NO | Kode   |  Paket  |  Waktu Tempuh  |      Harga     |');
+		writeln('    |----|--------|---------|----------------|----------------|');
+		writeln('    | 1. | CAMP1  | Paket 1 |       2 Jam    |  75.000/orang  |');
+		writeln('    | 2. | CAMP2  | Paket 2 |       1 Jam    |  50.000/orang  |');
+		writeln('    |----|--------|---------|----------------|----------------|');
+		writeln('');
+		write  ('    Masukkan kode paket pilihan     : '); readln (Cod);
+		if (Cod='CAMP1') or (Cod='camp1') then
+		begin
+		Pilih:='Paket 1';
+		harga:=75000;
+		write  ('     Apakah Anda Punya Member [Y/T]  : ');readln (mem);
+		write  ('     Jumlah Tiket Yang anda Pesan    : ');readln (jp);
+		goto menu6;
+		end;
+		if (Cod='CAMP2') or (Cod='camp2') then
+		Pilih:='Paket 2';
+		harga:=50000;
+		write  ('    Apakah Anda Punya Member [Y/N]  : ');readln (mem);
+		write  ('    Jumlah Tiket Yang anda Pesan    : ');readln (jp);
+		goto menu6;
+		end
+		else
+		write  ('   Masukkan Anda Salah');
+		goto menu5;
+       end;
+
+
+
+menu6:
+		begin
+		clrscr;
+		writeln ;
+		writeln('   ================================================================');
+		writeln('                    TRANSAKSI TIKET WAHANA ALAM LOLONG             ');
+		writeln('   ================================================================');
+		writeln('    Pilihan Wahana         : ',wisata);
+		writeln('    Paket                  : ',Pilih);
+		writeln('    Banyak Tiket yg dibeli : ',jp);
+		writeln('    Harga Per Tiket        : Rp. ',harga:0:0);
+		TOTAL := jp * harga;
+		writeln('    Total Biaya            : Rp. ',TOTAL:0:0);
+		if (mem = 'Y') or (mem='y') then
+		discont := TOTAL * 0.1
+		else if (mem = 'T') or (mem='t') then
+		discont := 0;
+		writeln('    Diskon Member          : Rp. ',discont:0:0);
+		if jp >= 20 then
+		diskon:= TOTAL * 0.2
+		else if jp < 20  then
+		diskon:=0;
+		writeln('    Diskon Promo           : Rp. ',diskon:0:0);
+		TOTAL1 := TOTAL - discont-diskon;
+		writeln('    Total Yg Harus Dibayar : Rp. ',TOTAL1:0:0);
+		writeln('   ================================================================');
+		write  ('    Uang Anda Adalah       : Rp. ');readln(ua);
+		kem := ua - TOTAL1;
+		if ua<TOTAL1 then
+		begin
+		textcolor(14);
+		writeln('              MOHON MAAF UANG ANDA TIDAK MENCUKUPI');
+		end
+		else
+                writeln('    Kembalian Uang Anda    : Rp. ',kem:0:0);
+                textcolor(15);
+		writeln('   =================================================================');
+		writeln('                          TERIMA KASIH');
+		writeln('                SELAMAT MENIKMATI WAHANA PILIHAN ANDA');
+		writeln('');
+		write('    Apakah anda ingin memilih lagi? [Y/N] : ');readln(lagi);
+		if (Lagi='Y') or (Lagi='y') then
+		GoTo menu1;
+		if (Lagi='N') or (Lagi='n') then
+		exit;
+		end;
+
+
+end
+end.
