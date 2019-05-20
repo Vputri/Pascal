@@ -1,0 +1,13 @@
+var d,e,f,g:byte;
+begin
+     e:=2;
+     d:=3;
+     while e<d do
+     begin
+          for f:=1 to e do
+              g:=succ(f);
+              writeln(g);
+              e:=e+1;
+     end;
+readln;
+end.
